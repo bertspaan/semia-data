@@ -1,0 +1,8 @@
+env
+.vscode
+
+thumbnails/*
+!thumbnails/README.md
+
+images/*
+!images/README.md
