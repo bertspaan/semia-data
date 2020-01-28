@@ -1,8 +1,16 @@
 env
 .vscode
+node_modules
 
-thumbnails/*
-!thumbnails/README.md
+source/thumbnails/*
+!source/thumbnails/README.md
 
-images/*
-!images/README.md
+output/images/*
+!output/images/README.md
+
+output/tiles/*
+!output/tiles/README.md
+
+source/attributes/openbeelden_vc.hdf5
+source/attributes/openbeelden_flow.hdf5 
+source/attributes/openbeelden_resnet.hdf5

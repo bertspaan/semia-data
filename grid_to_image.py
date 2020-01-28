@@ -45,12 +45,12 @@ def printProgress(step, total):
 
 # input
 parser = argparse.ArgumentParser()
-parser.add_argument('-in', dest="INPUT_FILE", default="grid/tsne_embedding_all.csv", help="Input CSV file with grid assignments")
-parser.add_argument('-images', dest="IMAGE_PATH", default="thumbnails/126x256/thumbnails128x256", help="Image path")
-parser.add_argument('-shots', dest="SHOTS_FILE", default="grid/shots.csv", help="Input CSV file shot IDs")
+parser.add_argument('-in', dest="INPUT_FILE", default="output/grid/tsne_embedding_all.csv", help="Input CSV file with grid assignments")
+parser.add_argument('-images', dest="IMAGE_PATH", default="source/thumbnails/126x256/thumbnails128x256", help="Image path")
+parser.add_argument('-shots', dest="SHOTS_FILE", default="output/shots.csv", help="Input CSV file shot IDs")
 parser.add_argument('-tile', dest="TILE_SIZE", default="128x128", help="Tile size in pixels")
 parser.add_argument('-grid', dest="GRID_SIZE", default="321x322", help="Grid size in cols x rows")
-parser.add_argument('-out', dest="OUTPUT_FILE", default="images/tsne_embedding_all.png", help="File for output")
+parser.add_argument('-out', dest="OUTPUT_FILE", default="output/images/tsne_embedding_all.png", help="File for output")
 a = parser.parse_args()
 
 shots = np.loadtxt(a.SHOTS_FILE, delimiter=",", dtype='str')

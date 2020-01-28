@@ -5,6 +5,6 @@ python3 tsne_to_grid.py \
   -out $2
 
 # For example, with tsne_embedding_colour.npy:
-# python tsne_to_grid.py \
-#   -in "tsne/tsne_embedding_colour.npy" \
-#   -out "grid/tsne_embedding_colour.csv"
+# python3 tsne_to_grid.py \
+#   -in "source/tsne/tsne_embedding_colour.npy" \
+#   -out "output/grid/tsne_embedding_colour.csv"
