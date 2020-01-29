@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# source ./env/bin/activate
-source ./env/bin/activate.fish
+# First, activate the Python virtual environment.
+# Then, run ./run.sh source/tsne/tsne_embedding_colour.npy
 
 TSNE=$1
 

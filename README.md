@@ -105,3 +105,28 @@ Then, run it on the CSV file `tsne_embedding_colour.csv`:
     ./grid-to-shot-index.js \
         output/grid/tsne_embedding_colour.csv \
         output/shots.csv > tsne_embedding_colour.json
+
+## Metadata for API
+
+All data needed by the JSON API is contained in one file: [`api-data.ndjson`](output/api-data.ndjson). This file contains:
+
+    - metadata (like title, description, year) for each video;
+    - for each shot, a list of similar shots for four computed properties (color, shape, complexity and direction);
+    - the start and end times for each shot in each video.
+
+Run the following steps to create `api-data.ndjson`.
+
+Install [jq](https://stedolan.github.io/jq/):
+
+    brew install jq
+
+Create `similar-shots.ndjson`:
+
+    cd source/similar-shots
+    unzip similar-shots.json.zip
+    jq '.[]' -r -M -c < similar-shots.json > similar-shots.ndjson
+    cd ../..
+
+Finally, run:
+
+    ./create-api-data.js > ./output/api-data.ndjson
